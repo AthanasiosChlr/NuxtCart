@@ -28,5 +28,5 @@ RUN composer install
 # Expose the port the app will run on
 EXPOSE 8000
 
-# Run the PHP-FPM server
-CMD ["php-fpm"]
+# Run the Laravel development server
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

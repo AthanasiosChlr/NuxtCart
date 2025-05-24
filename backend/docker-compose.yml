@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
     app:
         build:
@@ -14,7 +12,7 @@ services:
         networks:
             - app-network
         depends_on:
-            - db    
+            - db
         environment:
             - PHP_FPM_WORKERS=4
         command: ["php", "-S", "0.0.0.0:8000", "-t", "public"]
@@ -34,6 +32,19 @@ services:
             - app-network
         ports:
             - "3306:3306"
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: laravel-phpmyadmin
+        restart: unless-stopped
+        environment:
+            PMA_HOST: db
+            PMA_USER: laravel
+            PMA_PASSWORD: secret
+        ports:
+            - "8080:80"
+        networks:
+            - app-network
 
 volumes:
     db-data:
