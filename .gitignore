@@ -1,0 +1,33 @@
+# === FRONTEND (Nuxt) ===
+/frontend/.nuxt
+/frontend/.output
+/frontend/.nitro
+/frontend/.cache
+/frontend/dist
+/frontend/node_modules
+/frontend/.data
+
+# === BACKEND (Laravel) ===
+/backend/vendor
+/backend/storage/*.key
+/backend/storage/*.log
+/backend/storage/framework/*
+/backend/storage/logs/*
+/backend/bootstrap/cache/*
+/backend/.env
+/backend/.env.*
+!/backend/.env.example
+/backend/*.log
+
+# === COMMON ===
+*.log
+logs
+
+# IDEs & System
+.DS_Store
+.idea/
+.vscode/
+.fleet/
+Thumbs.db
+ehthumbs.db
+Desktop.ini

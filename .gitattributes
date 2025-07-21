@@ -1,0 +1,38 @@
+# === Normalize text files ===
+* text=auto
+
+# === Treat PHP and JS as UTF-8 ===
+*.php text
+*.js  text
+*.ts  text
+*.vue text
+*.json text
+*.css text
+*.scss text
+*.html text
+
+# === Treat env files as text ===
+*.env text
+
+# === Treat shell scripts as text ===
+*.sh text eol=lf
+
+# === Exclude compiled/binary files from diff ===
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.mp4 binary
+*.mp3 binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+
+# === GitHub linguist overrides ===
+# Tell GitHub that PHP is the main language
+*.blade.php linguist-language=PHP
+/public/* linguist-vendored
+/node_modules/* linguist-vendored
+/vendor/* linguist-vendored
